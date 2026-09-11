@@ -1,0 +1,81 @@
+body {
+    height: 900px;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, rgb(220, 202, 250), rgb(27, 25, 117));
+    color: rgb(206, 185, 239);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+button {
+    display: flex;
+    margin-top: 32px;
+    padding: 8px 20px;
+    border-radius: 6px;
+    background-color: rgb(206, 185, 239);
+    color: rgb(28, 27, 132);
+    border: none;
+    box-shadow: 1px 8px 1px 0px rgba(4, 4, 4, 0.3);
+}
+
+.section2 {
+    display: flex;
+    justify-content: space-around;
+
+    a {
+         text-decoration: none;
+    }
+}
+
+form textarea,
+form input {
+    width: 100%;
+    outline: none;
+    border-radius: 6px;
+    padding: 10px 12px;
+    border: none;
+    background-image: linear-gradient(to bottom, rgb(184, 154, 233), white);
+}
+
+form label {
+    margin: 10px;
+}
+
+.section1 {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.section1 select {
+    padding: 3px 30px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background-image: linear-gradient(to bottom, rgb(184, 154, 233), white);
+}
+
+form {
+    background-image: linear-gradient(to bottom, rgb(75, 60, 143), rgb(133, 17, 17));
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 1px 12px 1px 0px rgba(34, 60, 80, 0.3);
+    max-height: 820px;
+}

@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/main/index.css">
+
+</head>
+
+<body>
+    {% include "header.html" %}
+    {% include "message.html" %}
+    <div class="continer1">
+        <div class="section1">
+            <h1>добро пожаловать в наш сайт <span>HOT GAMES</span></h1>
+            <form class='form_1' method="GET">
+                <div class="form_filter">
+                    {{ product.form }}
+                    <button>
+                        фильтровать
+                    </button>
+                </div>
+            </form>
+            {% for cotegorie in cotegories %}
+
+            <a href="cotegory_id">{{vidi.title}}</a>
+
+            {% endfor %}
+            <div class="games_title">
+                {% for post in posts %}
+
+                <div class="section_cart">
+
+                     
+
+                    <div class="section_cart_bottom">
+                        <div class="section_text_right1">
+                            <p>{{post.title}}</p>
+                        </div>
+                        <div class="section_text_right1">
+                            <p>{{post.price}}$</p>
+                            <a href="{% url 'games_deteilz' post.id %}" class="detailz_btn">подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% if posts.paginator.num_pages > 1 %}
+            <div class="pagination">
+                {% for p in posts.paginator.page_range %}
+                <a href="{% querystring page=p %}" class="page-link {% if posts.number == p %}active{% endif %}">
+                    {{ p }}
+                </a>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    {% include "footer.html" %}
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.coneiner1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 97px 0px 97px;
+    background-image: url('../img/Без\ названия\ \(1\).jfif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.section {
+    width: 700px;
+    background-color: black(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 20px;
+    border: rgb(125, 124, 124) solid 3px;
+    box-shadow: 1px 12px 6px 0px rgba(34, 60, 80, 0.3);
+}
+
+.section_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.section_bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.section_info {
+    background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(125, 124, 124));
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0px;
+    border-radius: 10px;
+    color: black;
+    border: rgb(125, 124, 124) solid 3px;
+}
+
+.section_login {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 100%;
+    background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(125, 124, 124));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    
+}
+.avatar-a{
+    font-size: 30px;
+    border: rgb(113, 113, 113) solid 3px;
+}
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.prifil_btn {
+    background-image: linear-gradient(to top left, rgb(255, 255, 255), rgb(125, 124, 124));
+    display: flex;
+    align-items: center;
+    padding: 7px 13px;
+    margin-top: 10px;
+    max-width: 45px;
+    color: black;
+    border-radius: 10px;
+    border: rgb(125, 124, 124) solid 3px;
+}
+
+.name_user {
+    color: black;
+    font-size: 20px;
+}
+
+.section_profil {
+    background-image: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(125, 124, 124));
+    display: flex;
+    justify-content: center;
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: rgb(253, 253, 253);
+}
+
+.input_upd {
+    border: none;
+    mix-blend-mode: multiply;
+    outline: none;
+    font-size: 16px;
+}
+
+.input_btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.input_button {
+    color: black;
+    border-radius: 10px;
+    border: rgb(125, 124, 124) solid 3px;
+    padding: 10px 12px;
+    margin-top: 10px;
+    font-size: 16px;
+    background-image: linear-gradient(to top left, rgb(255, 255, 255), rgb(125, 124, 124));
+}
+
+.a_upd {
+    color: black;
+    font-size: 16px;
+    margin-right: 40px;
+}

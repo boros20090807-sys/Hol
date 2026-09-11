@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/main/regist.css">
+</head>
+
+<body>
+    <div class="container">
+        <form method="POST" action="{% url 'regist' %}">
+            
+        {% csrf_token %}
+        
+            <h2 class="avtor">Авторизация</h2>
+            <div>
+                <label for="phone">Логин:</label>
+                <input type="text" name="phone" id="phone" required>
+            </div>
+            <div>
+                <label for="password">Пароль:</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div>
+                <label for="password1">Повтарите Пароль:</label>
+                <input type="password1" name="password1" id="password1" required>
+            </div>
+            <button type="submit">создать</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/main/header.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="section1">
+            <div class="header_sec">
+                <div class="section_riht">
+                    <img src="/static/img/Gemini_Generated_Image_k1dro9k1dro9k1dr.png" alt="">
+                </div>
+                <div class="section_redith">
+                    <form method="GET">
+                        <input type="text" name="q" value="{{ request.GET.q }}" placeholder="Поиск игр" class="input">
+
+                        <button type="submit" class="button_input">Найти</button>
+                    </form>
+                    <div class="nav">
+                        <a href="/">Главное</a>
+                        <a href="{% url 'about' %}">О нас</a>
+                        <a href="{% url 'add_create' %}">Создать пост</a>
+                    </div>
+                    {% if user.is_authenticated %}
+                    <div class="accaunt">
+                        <div class="avata">
+                            {% if request.user.avatar %}
+                            <a href="{% url 'profil' %}"><img class="avata-img" src="{{ request.user.avatar.url }}" alt=""></a>
+                            {% else %}
+                            <div class="avatar-a">
+                                <a href="{% url 'profil' %}">{{ user.username|slice:":1"|upper }}</a>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% else %}
+
+                    <a href="{% url 'login' %}" class="login_btn">Войти</a>
+                    {% endif %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

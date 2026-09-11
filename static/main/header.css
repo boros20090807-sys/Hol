@@ -1,0 +1,103 @@
+* {
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0;
+    margin: 0;  
+}
+
+.container {
+    width: 100%;
+    box-shadow: 1px 12px 6px 0px rgba(34, 60, 80, 0.3);
+    position: sticky;
+    background-image: linear-gradient(to left, rgb(255, 255, 255), rgb(161, 160, 160));
+}
+
+.section12 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_sec {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.section_riht {
+    img {
+        max-width: 200px;
+    }
+}
+
+.section_redith {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-right: 20px;
+
+    a {
+        color: black;
+        font-size: 24px;
+    }
+
+    .input {
+        display: flex;
+        padding: 6px 100px 6px 50px;
+        background-color: rgb(69, 66, 66);
+        color: white;
+        border-radius: 6px;
+
+    }
+
+    .button_input {
+        display: flex;
+        background-color: rgb(69, 66, 66);
+        padding: 6px 12px;
+        border-radius: 6px;
+        color: rgb(128, 123, 123);
+    }
+}
+
+.section_redith form {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.accaunt_avatar {
+    width: 32px;
+    border-radius: 100%;
+    padding: 12px 10px;
+    background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(125, 124, 124));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: rgb(113, 113, 113) solid 3px;
+
+    a {
+        color: white;
+    }
+}
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.avata {
+    width: 65px;
+    height: 105px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    
+}
+.avata-img {
+    width: 90%;
+    height: 55px;
+    border-radius: 100%;
+}

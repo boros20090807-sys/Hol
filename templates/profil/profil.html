@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'main/profil.css' %}">
+</head>
+
+<body>
+    {% include "header.html" %}
+    <div class="coneiner1">
+
+        <div class="section">
+
+            <div class="section_top">
+                <div class="section_login">
+                    <div class="avatar">
+                        {% if request.user.avatar %}
+                        <img class="avatar-img" src="{{ request.user.avatar.url }}" alt="">
+                        {% else %}
+                        <div class="avatar-a">
+                            {{ user.username|slice:":1"|upper }}
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="name_user">
+                        {{ request.user.first_name }}
+                    </div>
+                </div>
+                <div class="section_profil">
+                    {% if user.is_superuser %}
+                    <p>супер пользователь</p>
+                    {% elif user.is_staff %}
+                    <p>сотрудник</p>
+                    {% elif user.user %}
+                    <p>пользователь</p>
+                    {% endif %}
+                </div>
+                <div class="exit_btn">
+                    <a href="{% url 'logout' %}" class="prifil_btn">Выйти</a>
+                </div>
+
+            </div>
+
+
+            <form method="POST">
+                {% csrf_token %}
+                <div class="section_bottom">
+                    <div class="section_info">
+                        {% if request.user.first_name %}
+                        <p>имя:</p>
+                        <input type="text" name="first_name" value="{{request.user.first_name}}" class="input_upd">
+                        {% else %}
+                        <p>имя: <span>не указано</span></p>
+                        {% endif %}
+                    </div>
+                    <div class="section_info">
+                        {% if request.user.last_name %}
+                        <p>фамилия:</p>
+                        <input type="text" name="last_name" value="{{request.user.last_name}}" class="input_upd">
+                        {% else %}
+                        <p>фамилия: <span>не указано</span></p>
+                        {% endif %}
+                    </div>
+
+                    <div class="section_info">
+                        {% if request.user.email %}
+                        <p>email:</p>
+                        <input type="text" name="email" value="{{request.user.email}}" class="input_upd">
+                        {% else %}
+                        <p>email: <span>не указано</span></p>
+                        {% endif %}
+                    </div>
+
+                    <div class="section_info">
+                        {% if request.user.phone %}
+                        <p>телефон:</p>
+                        <input type="text" name="phone" value="{{request.user.phone}}" class="input_upd">
+                        {% else %}
+                        <p>телефон: <span>не указано</span></p>
+                        {% endif %}
+                    </div>
+
+                    <div class="section_info">
+                        {% if request.user.password %}
+                        <p>пороль:</p>
+                        <a href="/update_password/" class="a_upd">изменить пороль</a>
+                        {% else %}
+                        <p>пороль: <span>не указано</span></p>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="input_btn">
+                    <a href="{% url 'main' %}" class="prifil_btn">Назад</a>
+                    <button type="submit" class="input_button">Cохранить</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    {% include "footer.html" %}
+
+</body>
+
+</html>

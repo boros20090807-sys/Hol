@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <link rel="stylesheet" href="/static/main/login.css">
+</head>
+
+<body>
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+
+
+
+
+        <div>
+            <label for="phone">Телефон номер</label>
+            <input type="number" name="phone" required>
+        </div>
+
+        <div>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <button type="submit">Войти</button>
+        <a href="{% url 'regist' %}">зарегистрироватся</a>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ games.title }}.HOT GAMES</title>
+    <link rel="stylesheet" href="{% static 'main/deteilz.css' %}">
+</head>
+    
+<body>
+    {% include "header.html" %}
+
+    <main class="detail_container">
+        <div class="top-bar">
+            <a href="{% url 'main' %}" class="btn btn-back">← На главную</a>
+            <div class="admin-actions">
+                <a href="{% url 'update_deteilz' games.id %}" class="btn btn-edit">Изменить</a>
+                <a href="{% url 'post_delete' games.id %}" class="btn btn-delete">Удалить</a>
+            </div>
+        </div>
+
+        <div class="detail_card">
+            <div class="game">
+                {% if games.image %}
+                    <img src="{{ games.image.url }}" alt="{{ games.title }}" class="game_poster">
+                {% else %}
+                    <div class="not_image">Нет изображения</div>
+                {% endif %}
+            </div>
+
+            <div class="info">
+                <h1 class="title">{{ games.title }}</h1>
+
+                <div class="price">
+                    <span class="game_price">{{ games.price }}$</span>
+                    <a href="https://youtu.be/oHg5SJYRHA0?si=MAZcAGZVquAtyALq"class="btn btn-buy">Купить</a>
+                </div>
+
+                <div class="text">
+                    <h3>Описание</h3>
+                    <p class="game_text">{{ games.text }}</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    {% include "footer.html" %}
+</body>
+
+</html>

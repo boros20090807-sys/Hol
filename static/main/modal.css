@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.deteilz_delete {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    gap: 20px;
+    background-color: rgb(238, 236, 236);
+    max-width: 1200px;
+    border-radius: 20px;
+    box-shadow: 1px 8px 1px 0px rgba(4, 4, 4, 0.3);
+    padding: 150px 40px 100px;
+
+    h2 {
+        font-size: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 1000px
+    }
+
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+form {
+    display: flex;
+    gap: 450px;
+}
+
+button {
+    padding: 15px 25px;
+    border-radius: 9px;
+    border: none;
+    background-color: green;
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 25px;
+    }
+}
+.delete {
+        background-color: rgb(255, 0, 0);
+        color: white;
+        font-size: 25px;
+    }
+button:hover{
+    background-color: rgb(72, 170, 72);
+}
+.delete:hover{
+    background-color: rgb(245, 45, 45);
+}

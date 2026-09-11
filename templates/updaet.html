@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изменение</title>
+    {% load static %}
+    <link rel="stylesheet" href="/static/main/update.css">
+</head>
+
+<body>
+    <form method="post" class="space-y-6">
+        {% csrf_token %}
+        <div>
+            <label for="">Название</label>
+            {{ form.title }}
+        </div>
+        <div>
+            <label for="">Описание</label>
+            {{ form.text }}
+        </div>
+        <div>
+            <label for="">Ценна</label>
+            {{ form.price }}
+        </div>
+        <div>
+            <label for="">Количество</label>
+            {{ form.count }}
+        </div>
+
+        <div>
+            <label for="">Фото на данный момент</label>
+            {{ form.image }}
+        </div>
+
+        <div class="section1">
+            <div>
+                <label for="">Котегория</label>
+                {{ form.cotegory }}
+            </div>
+            <div>
+                <label for="">Доступен</label>
+                {{ form.isActive }}
+            </div>
+        </div>
+        <div class="section2">
+            <button type="submit">Сохранить</button>
+            <a href="{% url 'main'%}"><button class="btn_exed">Выход</button></a>
+        </div>
+
+    </form>
+</body>
+
+</html>

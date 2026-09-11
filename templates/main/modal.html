@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'main/modal.css'%}">
+</head>
+
+<body>
+    <main class="deteilz_delete">
+        <h2>вы действительно хотите удалить пост: <span>{{product.title}}</span></h2>
+        <p>то что удалите будетна навсегда удалено и без возвратно</p>
+
+        <form method="POST" action="{% url 'post_upedaet' game.id %}">
+    {% csrf_token %}
+    
+    <button type="submit" class="delete">удалить</button>
+    
+    <a href="{% url 'games_deteilz' product.id %}" class="delete1">отмена</a>
+</form>
+    </main>
+</body>
+
+</html>

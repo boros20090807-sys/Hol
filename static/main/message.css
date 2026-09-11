@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.stilizing {
+    width: 100%;
+    max-width: 450px;
+    padding: 14px 20px;
+    color: #151c33;
+    border-radius: 10px;
+    font-size: 15px;
+    box-sizing: border-box;
+    background-image: linear-gradient(to bottom right, rgb(220, 202, 250), rgb(27, 25, 117));
+    margin-left: 500px;
+}

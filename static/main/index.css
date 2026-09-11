@@ -1,0 +1,133 @@
+* {
+    text-decoration: none;
+}
+html,body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.continer1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+    .section1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1 {
+            margin-top: 60px;
+            font-size: 39px;
+
+            span {
+                color: brown;
+            }
+        }
+
+
+        .section_cart {
+            border-radius: 10px;
+            background-color: rgb(245, 245, 243);
+            padding: 15px;
+            box-shadow: 1px 12px 6px 0px rgba(34, 60, 80, 0.3);
+
+
+            img {
+                border-radius: 6px;
+                max-width: 200px;
+                max-height: 210px;
+            }
+
+            .detailz_btn {
+                color: white;
+                background-color: rgb(69, 66, 66);
+                padding: 8px 15px;
+                border-radius: 6px;
+                box-shadow: 1px 6px 3px 0px rgba(34, 60, 80, 0.3);
+            }
+
+
+
+            .section_text_right1 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                margin: 5px;
+
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+.games_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.section_cart img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+
+
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 35px;
+    margin-bottom: 23px;
+    width: 100%;
+}
+
+.page-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: rgb(69, 66, 66);
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 1px 4px 6px rgba(34, 60, 80, 0.2);
+}
+
+.page-link.active {
+    background-color: #b32d2d;
+}
+
+form_1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form_filter {
+    background-color: rgb(237, 237, 230);
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    box-shadow: 1px 12px 12px 0px rgba(34, 60, 80, 0.3);
+
+    button {
+        padding: 5px 12px;
+        border-radius: 6px;
+        border: none;
+        background-color: rgb(69, 66, 66);
+        color: white;
+        
+    }
+}
